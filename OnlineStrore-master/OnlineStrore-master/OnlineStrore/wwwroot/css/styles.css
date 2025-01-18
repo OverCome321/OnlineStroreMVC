@@ -1,0 +1,511 @@
+﻿/* Общие настройки */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+td {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Шапка сайта */
+header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #0060cc;
+    padding: 10px 20px;
+}
+
+    header img {
+        height: 120px;
+        position: static;
+        top: 10px;
+        left: 10px;
+    }
+
+    header h1 {
+        color: #fff;
+        margin: 0;
+    }
+    header h2 {
+        color: #fff;
+        margin: 0;
+    }
+
+/* Меню навигации */
+nav {
+    background-color: #0060cc;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    nav a {
+        margin: 0 15px;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        nav a:hover {
+            background-color: #111c57;
+            transform: scale(1.05);
+        }
+
+/* Основная часть */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Общие стили для модальных окон */
+.modal {
+    display: none;
+    position: fixed; /* Оставить модальное окно на экране */
+    z-index: 1; /* Расположить выше остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если нужно */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+.modal-reg {
+    position: fixed; /* Оставить модальное окно на экране */
+    z-index: 1; /* Расположить выше остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если нужно */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+/* Контент модального окна */
+.modal-content {
+    background-color: #fff; /* Цвет фона */
+    margin: 10% auto; /* Отступ сверху и центрирование */
+    padding: 20px;
+    border-radius: 10px; /* Закругленные углы */
+    width: 40%; /* Ширина модального окна */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+    text-align: left; /* Текст выровнен влево */
+}
+
+    /* Заголовок модального окна */
+    .modal-content h2 {
+        text-align: center; /* Заголовок по центру */
+        color: #161872; /* Цвет заголовка */
+    }
+
+/* Кнопка закрытия модального окна */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #161872; /* Цвет при наведении */
+        text-decoration: none;
+        cursor: pointer;
+    }
+.search {
+    position: relative; /* Контекст для абсолютного позиционирования */
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}              
+
+    .search input {
+        width: 100px;
+        padding: 8px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .search button {
+        padding: 8px;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+/* Окно результатов */
+.search-results {
+    position: absolute;
+    top: 100%; /* Под полем ввода */
+    left: 44%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Смещение для центрирования */
+    width: 200px; /* Ширина окна */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1000;
+}
+
+.search-results-header {
+    display: flex;
+    justify-content: center; /* Центрируем текст */
+    align-items: center;
+    padding: 8px;
+    background-color: #f1f1f1;
+    color: black;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+}
+
+    .search-results-header .close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+.search-results ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 160px; /* Ограничение по высоте */
+    overflow-y: auto;
+}
+
+.search-results ul li {
+    padding: 8px;
+    text-align: center; /* Центрируем ссылки */
+    border-bottom: 1px solid #eee;
+}
+
+.search-results ul li:last-child {
+    border-bottom: none; /* Убираем последнюю линию */
+}
+
+    .search-results ul li a {
+        color: #000; /* Цвет текста черный */
+
+        text-decoration: none;
+        padding: 10px;
+        display: block; /* Полный клик на строку */
+        border-radius: 10px;
+    }
+
+/* Стили для кнопок */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #161872; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+    button:hover {
+        background-color: #161872; /* Цвет кнопки при наведении */
+    }
+
+.slider {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    overflow: hidden;
+    /*    border: 1px solid #ddd;*/
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    flex: 0 0 100%;
+    text-align: center;
+    height: 400px; /* Задайте фиксированную высоту слайда */
+    position: relative; /* Для адаптации к тексту ниже */
+    overflow: hidden; /* Скрывает все, что выходит за границы контейнера */
+}
+
+    .slide img {
+        max-width: 100%; /* Ограничивает ширину изображения */
+        max-height: 100%; /* Ограничивает высоту изображения */
+        object-fit: contain; /* Сохраняет пропорции изображения */
+        border-bottom: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    padding : 10px;
+    align-items: center;
+
+}
+
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="email"],
+input[type="Password"] {
+    width: 100%; /* Полная ширина */
+    padding: 10px; /* Отступ внутри поля */
+    margin: 8px 0; /* Отступ сверху и снизу */
+    border: 1px solid #ccc; /* Цвет границы */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+    margin-right: 5px; /* Отступ справа от чекбокса */
+}
+
+/* Стили для ссылок в чекбоксах */
+.modal-content a {
+    color: #161872; /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркивание */
+}
+
+    .modal-content a:hover {
+        color: #161872; /* Цвет ссылки при наведении */
+    }
+
+.content {
+    width: 75%; /* Остальная ширина для основного контента */
+    padding: 20px; /* Добавляем паддинг для основного контента */
+    box-sizing: border-box; /* Включаем паддинг в ширину */
+}
+
+.sidebar {
+    width: 320px;
+    background-color: #0060cc;
+    padding: 20px;
+}
+
+    .sidebar a {
+        display: block;
+        color: white;
+        margin-bottom: 10px;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .sidebar a:hover {
+            background-color: #111c57;
+            transform: scale(1.05);
+        }
+
+/* Партнеры */
+.partners {
+    background-color: #0060cc;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+    .partners h2 {
+        color: #fff;
+    }
+
+    .partners img {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .partners a {
+        display: block;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+        .partners a:hover {
+            color: #1abc9c;
+        }
+
+/* Карточки продуктов */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card {
+    width: 48%;
+    margin: 1%;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+    .card:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+/* Футер */
+footer {
+    background-color: #0060cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    background-color: #0060cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    button:hover {
+        background-color: #111c57;
+        transform: scale(1.05);
+    }
+
+/* Кнопка "Регистрация" */
+.auth-links {
+    text-align: right;
+}
+
+    .auth-links a {
+        color: #fff;
+        background-color: #0060cc;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+        .auth-links a:hover {
+            background-color: #16a085;
+        }
+
+/* Кнопка поиска */
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar input[type="button"] {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .search-bar input[type="button"]:hover {
+        background-color: #16a085;
+    }
+
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.catalog-flex{
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-between; 
+}
+.slider-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,34 @@
+﻿@using OnlineStrore.Controllers
+@using OnlineStrore.Dto
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!--Вход-->
+@model LoginClientDto
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <!-- Подключаем стили -->
+    <link href="@Url.Content("~/css/styles.css")" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="loginModal">
+        <div class="modal-content">
+            <h2>Войти</h2>
+            @Html.ValidationSummary(true)
+            <form asp-action="LoginClient" asp-controller="Client" method="post">
+                <label>Email</label>
+                <input type="email" asp-for="Email" required />
+                @Html.ValidationMessageFor(x => x.Email)
+
+                <label>Пароль</label>
+                <input type="Password" asp-for="Password" required />
+                @Html.ValidationMessageFor(x => x.Password)
+
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

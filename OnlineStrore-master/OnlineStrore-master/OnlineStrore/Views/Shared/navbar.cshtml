@@ -1,0 +1,19 @@
+﻿<!-- Навигация -->
+<nav>
+    <a href="@Url.Action("Details", "Product", new{id = "B69ACE72-1FD5-4F07-8F0D-225D7CA879BC"})">Тур по Европе</a>
+    <a href="@Url.Action("Details", "Product", new{id = "8D6F6746-E4EB-4BCB-B042-93721BECEE0C"})">Экзотическое направление</a>
+    <a href="@Url.Action("Details", "Product", new{id = "2733EE5C-BA4B-4CCC-8AE8-9ED7C797DB57"})">Круиз</a>
+    <a href="@Url.Action("Details", "Product", new{id = "CE920CE5-C772-48E7-9AF3-DAE0C5DBACBB"})">Горящая путевка</a>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Поиск по сайту..." />
+        <button type="button" id="clearButton">✖</button>
+        <div id="searchResults" class="search-results">
+            <div class="search-results-header">
+                <span>Результаты поиска</span>
+                @* <button class="close-button" onclick="hideSearchResults()">✖</button> *@
+            </div>
+            <ul class="resultsList" id="resultsList"></ul>
+        </div>
+    </div>
+</nav>
+

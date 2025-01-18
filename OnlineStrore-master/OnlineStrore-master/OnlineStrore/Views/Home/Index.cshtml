@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Layout.cshtml";
+}
+<!-- Контент -->
+<div class="content">
+    <h1 align="center">Туроператор "Путевка Мечты"!</h1>
+    <p>
+        «Путевка Мечты» — это ведущий туроператор, работающий в сфере организации путешествий с 2005 года.
+    </p>
+    <p>
+        Наша цель — предоставлять нашим клиентам незабываемые впечатления от путешествий, предлагая только лучшие курорты, отели и туры по всему миру.
+    </p>
+    <p>
+        Мы организуем как индивидуальные, так и групповые туры, помогая каждому туристу подобрать идеальный маршрут, исходя из его интересов и предпочтений. С 2010 года «Путевка Мечты» является разработчиком эксклюзивных туристических маршрутов и организатором крупных туров в самых популярных странах мира, включая Францию, Италию, Японию, Турцию и другие. За это время мы успешно реализовали сотни туров для клиентов по всему миру.
+    </p>
+
+    <h2>Наши туры в слайдере:</h2>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="~/images/paris.jpg" alt="Париж — Город любви" class="slider-image" height="500" width="500">
+                    <p class="image-description">Париж — Город любви</p>
+                </div>
+                <div class="slide">
+                    <img src="~/images/turkey.jpg" alt="Турция — Пляжи и отдых" class="slider-image" height="500" width="500">
+                    <p class="image-description">Турция — Пляжи и отдых</p>
+                </div>
+                <div class="slide">
+                    <img src="~/images/japan.jpg" alt="Япония — Традиции и современные чудеса" class="slider-image" height="500" width="500">
+                    <p class="image-description">Япония — Традиции и современные чудеса</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</div>

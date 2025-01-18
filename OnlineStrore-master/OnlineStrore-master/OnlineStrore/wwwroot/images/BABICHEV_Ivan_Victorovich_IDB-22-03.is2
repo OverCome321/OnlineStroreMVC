@@ -1,0 +1,455 @@
+<project name="Kursach IS2" info="">
+ <user name="BABICHEV IVAN IDB-22-03" info=""/>
+ <models>
+  <primaryModel>
+   <params LastID="39">
+    <param sign="i" id="1" codingType="1" name="Количество передач" number="1" o="4" group="3"/>
+    <param sign="alpha1" id="2" codingType="1" name="Угол обхвата на меньше шкиве" number="1" o="2" group="5"/>
+    <param sign="KUZ" id="3" codingType="1" name="Код узла" number="1" o="4" group="1"/>
+    <param sign="KSE" id="4" codingType="1" name="Код сборочной единицы" number="2" o="3" group="1"/>
+    <param sign="KD" id="5" codingType="1" name="Код детали" number="3" o="2" group="1"/>
+    <param sign="NUZ" id="6" codingType="1" name="Наименование узла" number="1" o="4" group="2"/>
+    <param sign="NSE" id="7" codingType="1" name="Наименование сборочной единицы" number="2" o="3" group="2"/>
+    <param sign="ND" id="8" codingType="1" name="Наименование детали" number="3" o="2" group="2"/>
+    <param sign="Crossectionalarea[][]" id="9" codingType="1" name="Размеры сечения ремня" number="2" o="2" group="5"/>
+    <param sign="F" id="10" codingType="1" name="Окружная сила" number="1" o="3" group="9"/>
+    <param sign="Sigma" id="11" codingType="1" name="Толщина ремня" number="3" o="2" group="5"/>
+    <param sign="b" id="12" codingType="1" name="Ширина ремня" number="4" o="3" group="5"/>
+    <param sign="D1" id="13" codingType="1" name="Диаметр меньшего шкива" number="5" o="2" group="5"/>
+    <param sign="Dmin" id="14" codingType="1" name="Наименьший диаметр шкива" number="6" o="2" group="5"/>
+    <param sign="N" id="15" codingType="1" name="Вся передаваемая мощность" number="2" o="2" group="9"/>
+    <param sign="u" id="16" codingType="1" name="Скорость ремня" number="1" o="2" group="8"/>
+    <param sign="Sigma0" id="17" codingType="1" name="Начальное напряжение" number="3" o="3" group="9"/>
+    <param sign="SigmaF0" id="18" codingType="1" name="Приведенное полезное напряжение" number="4" o="3" group="9"/>
+    <param sign="SigmaF" id="19" codingType="1" name="Допускаемое полезное напряжение" number="5" o="3" group="9"/>
+    <param sign="C0" id="20" codingType="1" name="Коэффициент расположения передачи в пространстве и способа натяжения ремня" number="6" o="3" group="9"/>
+    <param sign="C1" id="21" codingType="1" name="Коэффициент влияния угла обхвата alpha1 на меньшем шкиве" number="7" o="3" group="9"/>
+    <param sign="C2" id="22" codingType="1" name="Коэффициент влияния центробежной силы, уменьшающей сцепление ремня со шкивов у передач без автоматического натяжения ремня." number="8" o="3" group="9"/>
+    <param sign="C3" id="23" codingType="1" name="Коэффициент режима работы передачи" number="9" o="3" group="9"/>
+    <param sign="W" id="25" codingType="1" name="Коэффициент W при начальном напряжении Sigma0" number="10" o="3" group="9"/>
+    <param sign="bFunc" id="26" codingType="1" name="Наличие толщины ремня" number="1" o="2" group="4"/>
+    <param sign="Dmin_Sigma" id="27" codingType="1" name="Коэффициент Dmin/Sigma" number="7" o="2" group="5"/>
+    <param sign="N_v" id="28" codingType="1" name="Мощность/скорость ремня" number="11" o="2" group="9"/>
+    <param sign="MezOs" id="29" codingType="1" name="Межосевое расстояние" number="8" o="3" group="5"/>
+    <param sign="Natyazh" id="30" codingType="1" name="Вид натяжения" number="2" o="3" group="3"/>
+    <param sign="СНР" id="31" codingType="1" name="Способ натяжения ремня" number="3" o="2" group="3"/>
+    <param sign="beta" id="32" codingType="1" name="Угол наклона оси передачи к горизонту" number="9" o="2" group="5"/>
+    <param sign="Material" id="33" codingType="1" name="Материал ремня" number="4" o="2" group="3"/>
+    <param sign="Character" id="34" codingType="1" name="Характер нагрузки" number="5" o="3" group="3"/>
+    <param sign="TypeofMachine" id="35" codingType="1" name="Тип машины" number="6" o="3" group="3"/>
+    <param sign="Okruglenie_b" id="36" codingType="1" name="Округление до большего стандартного значения" number="10" o="3" group="5"/>
+    <param sign="A" id="37" codingType="1" name="Коэффициент A при начальном напряжении Sigma0" number="12" o="3" group="9"/>
+    <param sign="type_peredachi" id="38" codingType="1" name="Тип передачи" number="4" o="3" group="2"/>
+    <param sign="vid_peredachi" id="39" codingType="1" name="Вид передачи" number="5" o="3" group="2"/>
+   </params>
+   <objects LastID="4">
+    <object id="2" name="Деталь"/>
+    <object id="3" name="Сборочная единица"/>
+    <object id="4" name="Узел"/>
+   </objects>
+   <spd>
+    <actions lastID="96">
+     <pd level="1" id="1" type="3" formalization="0" symbol="122" name="Проектировочный расчет для всех плоскоременных передач" number="1" mark="" status="1"/>
+     <pd level="2" id="2" type="2" formalization="2" symbol="122" name="Проектировочный расчет для i-ой плоскоременной передачи" number="1" mark="" status="1"/>
+     <pd level="3" id="3" type="0" formalization="0" symbol="122" name="Фиксация i-ой передачи" number="1" mark="Текущему значению счеткика цикла ставится в соответствие i-ая передача&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="3" id="5" type="1" formalization="0" symbol="122" name="Определение размеров сечения ремня для всех плоскоременных передач в зависимости от наличия передачи, Crossectionalarea[][]" number="3" mark="" status="1">
+      <alts text="При наличии передачи"/>
+      <alts text="При отсутствии передачи"/>
+     </pd>
+     <pd level="4" id="6" type="2" formalization="2" symbol="122" name="Определение размеров сечения ремня для всех плоскоременных передач при наличии передачи, Crossectionalarea[][]" number="4" mark="" status="1"/>
+     <pd level="4" id="7" type="0" formalization="0" symbol="122" name="Определение размеров сечения ремня для всех плоскоременных передач при отсутствии передачи, Crossectionalarea[][]" number="5" mark="Crossectionalarea [i][1] = b&#xa;Crossectionalarea [i][2] = Sigma&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="8" type="0" formalization="0" symbol="122" name="Переход к следующей передаче" number="8" mark="i++&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="9" type="0" formalization="0" symbol="122" name="Определение размеров сечения ремня для всех плоскоременных передач при наличии передачи для предыдущей передачи, Crossectionalarea[][]" number="9" mark="Crossectionalarea [i][1] = b&#xa;Crossectionalarea [i][2] = Sigma&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="3" id="30" type="2" formalization="2" symbol="122" name="Определение размеров сечения ремня для текущей передачи, Crossectionalarea[][]" number="2" mark="" status="1"/>
+     <pd level="4" id="31" type="1" formalization="0" symbol="122" name="Определение стандартной толщины ремня, Sigma, в зависимости от наличия толщины ремня" number="1" mark="Sigma&lt;=D1/(Dmin/Sigma)" status="1">
+      <alts text="Наличие значения толщины ремня"/>
+      <alts text="Отсутствие значения толщины ремня"/>
+     </pd>
+     <pd level="4" id="32" type="2" formalization="2" symbol="122" name="Определение ширины ремня, b" number="2" mark="" status="1"/>
+     <pd level="5" id="33" type="0" formalization="3" symbol="122" name="Определение стандартной толщины ремня ,Sigma, при наличии значения толщины ремня" number="1" mark="Выбор из стандартного ряда  (таблица 1.3[1],1.4[1])&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="34" type="2" formalization="2" symbol="122" name="Определение стандартной толщины ремня ,Sigma, при отсутствии значения толщины ремня" number="2" mark="" status="1"/>
+     <pd level="5" id="48" type="2" formalization="2" symbol="122" name="Определение окружной силы F" number="3" mark="" status="1"/>
+     <pd level="5" id="49" type="0" formalization="0" symbol="122" name="Расчет ширины ремня, b" number="6" mark="b>=F/(Sigma*SigmaF)&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="50" type="2" formalization="2" symbol="122" name="Определение допускаемого полезного напряжения, SigmaF" number="5" mark="" status="1"/>
+     <pd level="6" id="51" type="2" formalization="2" symbol="122" name="Определение полезного приведенного напряжения, SigmaF0" number="8" mark="" status="1"/>
+     <pd level="6" id="52" type="2" formalization="2" symbol="122" name="Выбор величины коэффициента,C0" number="9" mark="" status="1"/>
+     <pd level="7" id="53" type="0" formalization="3" symbol="122" name="Нахождение значения коэффициента, A" number="3" mark="определяется по таблице 1.5[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;&#xa;" status="0"/>
+     <pd level="7" id="54" type="0" formalization="0" symbol="122" name="Расчет приведенного полезного напряжения, SigmaF0" number="5" mark="SigmaF0=A-W*Sigma/D1&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="6" id="55" type="2" formalization="2" symbol="122" name="Выбор величины коэффицента, C2" number="11" mark="" status="1"/>
+     <pd level="6" id="56" type="2" formalization="2" symbol="122" name="Выбор величины коэффициента, C1" number="10" mark="" status="1"/>
+     <pd level="6" id="57" type="2" formalization="2" symbol="122" name="Выбор величины коэффициента, C3" number="12" mark="" status="1"/>
+     <pd level="6" id="58" type="0" formalization="0" symbol="122" name="Расчет допускаемого полезного напряжения, SigmaF" number="13" mark="SigmaF=SigmaF0*C0*C1*C2*C3&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="59" type="0" formalization="3" symbol="122" name="Округление ширины ремня b до большего стандартного значения, Okruglenie_b" number="7" mark="определяется по таблице 1.9[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="4" id="60" type="0" formalization="1" symbol="122" name="Получение расчетных размеров сечения ремня (ширина b и толщина Sigma)" number="3" mark="определяется специалистом&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="6" id="63" type="2" formalization="2" symbol="122" name="Определение толщины ремня, Sigma" number="1" mark="" status="1"/>
+     <pd level="6" id="64" type="0" formalization="3" symbol="122" name="Расчет стандартной толщины ремня, Sigma" number="2" mark="Выбор из стандартного ряда (таблица 1.3[1],1.4[1])&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="66" type="0" formalization="3" symbol="122" name="Определение отношения Dmin/Sigma" number="1" mark="Определяется по таблице 1.1[1]&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="7" id="68" type="0" formalization="0" symbol="122" name="Расчет толщины ремня, Sigma" number="2" mark="Sigma&lt;=D1/(Dmin/Sigma)&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="6" id="69" type="0" formalization="1" symbol="122" name="Расчет отношения N_v" number="3" mark="Определяется специалистом&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="6" id="70" type="0" formalization="0" symbol="122" name="Расчет окружной силы F" number="4" mark="F=10^3*N/v&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="5" id="71" type="2" formalization="2" symbol="122" name="Выбор начального натяжения ремня, Sigma0" number="4" mark="" status="1"/>
+     <pd level="6" id="72" type="0" formalization="1" symbol="122" name="определение межосевого расстояния, MezOs" number="5" mark="определяется специалистом&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="6" id="73" type="0" formalization="1" symbol="122" name="Определение вида натяжения, Natyazh" number="6" mark="определяется специалистом&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="6" id="74" type="0" formalization="3" symbol="122" name="Определения начального напряжения, Sigma0, исходя из параметров межосевого расстояния и вида натяжения" number="7" mark="Определяется по пункту 3[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="75" type="0" formalization="3" symbol="122" name="Нахождение значения коэффициента, W" number="4" mark="определяется по таблице 1.5[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="76" type="0" formalization="1" symbol="122" name="Определение способа натяжения ремня, СНР" number="6" mark="определяется специалистом&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="7" id="77" type="0" formalization="1" symbol="122" name="Определение угла наклона оси передачи к горизонту, beta" number="7" mark="определяется специалистом&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="7" id="81" type="0" formalization="3" symbol="122" name="Определение коэффициента, C0 в зависимости от угла наклона оси передачи к горизонту" number="8" mark="Таблица 1.6 [1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0">
+      <alts text="beta = 0-60 градусов"/>
+      <alts text="beta = 60-80 градусов"/>
+      <alts text="beta = 80-90 градусов"/>
+     </pd>
+     <pd level="7" id="85" type="0" formalization="1" symbol="122" name="Определение угла обхвата на меньшем шкиве, alpha1" number="9" mark="определяется специалистом&#xa;/ND = &quot;шкив&quot;" status="0"/>
+     <pd level="7" id="86" type="0" formalization="3" symbol="122" name="Определение коэффициента, C1" number="10" mark="определяется по таблице 1.6[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="87" type="0" formalization="3" symbol="122" name="Определение скорости, u" number="11" mark="определяется по таблице 1.7[1]&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="7" id="88" type="0" formalization="3" symbol="122" name="Определение материала ремня, Material" number="12" mark="определяется по таблице 1.7[1]&#xa;/ND = &quot;ремень&quot;" status="0"/>
+     <pd level="7" id="89" type="0" formalization="3" symbol="122" name="Определение коэффициента, С2" number="13" mark="определяется по таблице 1.7[1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="90" type="0" formalization="3" symbol="122" name="Определение характера нагрузки, Character" number="14" mark="определяется по таблице 1.8 [1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;&#xa;" status="0"/>
+     <pd level="7" id="91" type="0" formalization="3" symbol="122" name="Определение типа машины, TypeofMachine" number="15" mark="определяется по таблице 1.8 [1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+     <pd level="7" id="92" type="0" formalization="3" symbol="122" name="Определение коэффициента, С3" number="16" mark="определяется по таблице 1.8 [1]&#xa;/ND = &quot;ремень&quot;&#xa;/NSE = &quot;передача&quot;&#xa;/type_peredachi = &quot;ременная&quot;&#xa;/vid_peredachi = &quot;плоскоременная&quot;" status="0"/>
+    </actions>
+    <links>
+     <link afe1="1" type="2" afe3="0" afe2="2"/>
+     <link afe1="1" type="3" afe3="0" afe2="2"/>
+     <link afe1="2" type="2" afe3="0" afe2="3"/>
+     <link afe1="2" type="2" afe3="0" afe2="5"/>
+     <link afe1="2" type="3" afe3="0" afe2="5"/>
+     <link afe1="5" type="2" afe3="0" afe2="6"/>
+     <link afe1="5" type="2" afe3="0" afe2="7"/>
+     <link afe1="5" type="3" afe3="0" afe2="7"/>
+     <link afe1="6" type="2" afe3="0" afe2="8"/>
+     <link afe1="6" type="2" afe3="0" afe2="9"/>
+     <link afe1="6" type="3" afe3="9" afe2="8"/>
+     <link afe1="6" type="3" afe3="0" afe2="9"/>
+     <link afe1="5" type="3" afe3="7" afe2="6"/>
+     <link afe1="2" type="3" afe3="30" afe2="3"/>
+     <link afe1="2" type="2" afe3="0" afe2="30"/>
+     <link afe1="2" type="3" afe3="5" afe2="30"/>
+     <link afe1="30" type="2" afe3="0" afe2="31"/>
+     <link afe1="30" type="2" afe3="0" afe2="32"/>
+     <link afe1="30" type="3" afe3="32" afe2="31"/>
+     <link afe1="30" type="3" afe3="60" afe2="32"/>
+     <link afe1="31" type="2" afe3="0" afe2="33"/>
+     <link afe1="31" type="2" afe3="0" afe2="34"/>
+     <link afe1="31" type="3" afe3="34" afe2="33"/>
+     <link afe1="31" type="3" afe3="0" afe2="34"/>
+     <link afe1="32" type="2" afe3="0" afe2="48"/>
+     <link afe1="32" type="2" afe3="0" afe2="49"/>
+     <link afe1="32" type="3" afe3="71" afe2="48"/>
+     <link afe1="32" type="3" afe3="59" afe2="49"/>
+     <link afe1="32" type="2" afe3="0" afe2="50"/>
+     <link afe1="32" type="3" afe3="49" afe2="50"/>
+     <link afe1="50" type="2" afe3="0" afe2="51"/>
+     <link afe1="50" type="2" afe3="0" afe2="52"/>
+     <link afe1="50" type="3" afe3="52" afe2="51"/>
+     <link afe1="50" type="3" afe3="56" afe2="52"/>
+     <link afe1="51" type="2" afe3="0" afe2="53"/>
+     <link afe1="51" type="2" afe3="0" afe2="54"/>
+     <link afe1="51" type="3" afe3="75" afe2="53"/>
+     <link afe1="51" type="3" afe3="0" afe2="54"/>
+     <link afe1="50" type="2" afe3="0" afe2="55"/>
+     <link afe1="50" type="3" afe3="57" afe2="55"/>
+     <link afe1="50" type="2" afe3="0" afe2="56"/>
+     <link afe1="50" type="3" afe3="55" afe2="56"/>
+     <link afe1="50" type="2" afe3="0" afe2="57"/>
+     <link afe1="50" type="3" afe3="58" afe2="57"/>
+     <link afe1="50" type="2" afe3="0" afe2="58"/>
+     <link afe1="50" type="3" afe3="0" afe2="58"/>
+     <link afe1="32" type="2" afe3="0" afe2="59"/>
+     <link afe1="32" type="3" afe3="0" afe2="59"/>
+     <link afe1="30" type="2" afe3="0" afe2="60"/>
+     <link afe1="30" type="3" afe3="0" afe2="60"/>
+     <link afe1="34" type="2" afe3="0" afe2="63"/>
+     <link afe1="34" type="2" afe3="0" afe2="64"/>
+     <link afe1="34" type="3" afe3="64" afe2="63"/>
+     <link afe1="34" type="3" afe3="0" afe2="64"/>
+     <link afe1="63" type="2" afe3="0" afe2="66"/>
+     <link afe1="63" type="3" afe3="68" afe2="66"/>
+     <link afe1="63" type="2" afe3="0" afe2="68"/>
+     <link afe1="63" type="3" afe3="0" afe2="68"/>
+     <link afe1="48" type="2" afe3="0" afe2="69"/>
+     <link afe1="48" type="2" afe3="0" afe2="70"/>
+     <link afe1="48" type="3" afe3="70" afe2="69"/>
+     <link afe1="48" type="3" afe3="0" afe2="70"/>
+     <link afe1="32" type="2" afe3="0" afe2="71"/>
+     <link afe1="32" type="3" afe3="50" afe2="71"/>
+     <link afe1="71" type="2" afe3="0" afe2="72"/>
+     <link afe1="71" type="2" afe3="0" afe2="73"/>
+     <link afe1="71" type="3" afe3="73" afe2="72"/>
+     <link afe1="71" type="3" afe3="74" afe2="73"/>
+     <link afe1="71" type="2" afe3="0" afe2="74"/>
+     <link afe1="71" type="3" afe3="0" afe2="74"/>
+     <link afe1="51" type="2" afe3="0" afe2="75"/>
+     <link afe1="51" type="3" afe3="54" afe2="75"/>
+     <link afe1="52" type="2" afe3="0" afe2="76"/>
+     <link afe1="52" type="2" afe3="0" afe2="77"/>
+     <link afe1="52" type="3" afe3="77" afe2="76"/>
+     <link afe1="52" type="2" afe3="0" afe2="81"/>
+     <link afe1="56" type="2" afe3="0" afe2="85"/>
+     <link afe1="56" type="2" afe3="0" afe2="86"/>
+     <link afe1="56" type="3" afe3="86" afe2="85"/>
+     <link afe1="56" type="3" afe3="0" afe2="86"/>
+     <link afe1="55" type="2" afe3="0" afe2="87"/>
+     <link afe1="55" type="2" afe3="0" afe2="88"/>
+     <link afe1="55" type="3" afe3="88" afe2="87"/>
+     <link afe1="55" type="3" afe3="89" afe2="88"/>
+     <link afe1="55" type="2" afe3="0" afe2="89"/>
+     <link afe1="55" type="3" afe3="0" afe2="89"/>
+     <link afe1="57" type="2" afe3="0" afe2="90"/>
+     <link afe1="57" type="2" afe3="0" afe2="91"/>
+     <link afe1="57" type="3" afe3="91" afe2="90"/>
+     <link afe1="57" type="3" afe3="92" afe2="91"/>
+     <link afe1="57" type="2" afe3="0" afe2="92"/>
+     <link afe1="57" type="3" afe3="0" afe2="92"/>
+     <link afe1="52" type="3" afe3="81" afe2="77"/>
+     <link afe1="52" type="3" afe3="0" afe2="81"/>
+    </links>
+   </spd>
+   <matrix>
+    <AElement e1="2" e3="0" id="0" type="4" power="1" name="" e2="1" char="33"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="1" char="42"/>
+    <AElement e1="8" e3="0" id="0" type="4" power="1" name="" e2="1" char="42"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="1" char="43"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="1" char="43"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="3" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="6" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="9" char="42"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="9" char="42"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="11" char="42"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="18" char="42"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="25" char="43"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="11" char="43"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="13" char="43"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="19" char="42"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="18" char="43"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="12" char="42"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="10" char="43"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="19" char="43"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="11" char="43"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="9" char="42"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="11" char="43"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="12" char="43"/>
+    <AElement e1="31" e3="0" id="0" type="4" power="1" name="" e2="26" char="63"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="26" char="43"/>
+    <AElement e1="66" e3="0" id="0" type="4" power="1" name="" e2="27" char="42"/>
+    <AElement e1="66" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="66" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="11" char="42"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="13" char="43"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="27" char="43"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="69" e3="0" id="0" type="4" power="1" name="" e2="28" char="42"/>
+    <AElement e1="69" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="69" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="69" e3="0" id="0" type="4" power="1" name="" e2="15" char="43"/>
+    <AElement e1="69" e3="0" id="0" type="4" power="1" name="" e2="16" char="43"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="10" char="42"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="28" char="43"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="29" char="42"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="30" char="42"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="17" char="42"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="29" char="43"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="30" char="43"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="25" char="42"/>
+    <AElement e1="76" e3="0" id="0" type="4" power="1" name="" e2="31" char="42"/>
+    <AElement e1="76" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="76" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="77" e3="0" id="0" type="4" power="1" name="" e2="32" char="42"/>
+    <AElement e1="77" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="77" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="85" e3="0" id="0" type="4" power="1" name="" e2="2" char="42"/>
+    <AElement e1="85" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="85" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="21" char="42"/>
+    <AElement e1="87" e3="0" id="0" type="4" power="1" name="" e2="16" char="42"/>
+    <AElement e1="87" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="87" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="88" e3="0" id="0" type="4" power="1" name="" e2="33" char="42"/>
+    <AElement e1="88" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="88" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="22" char="42"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="33" char="43"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="16" char="43"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="34" char="42"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="35" char="42"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="23" char="42"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="34" char="43"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="35" char="43"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="20" char="43"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="21" char="43"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="22" char="43"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="23" char="43"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="12" char="43"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="36" char="42"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="11" char="42"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="37" char="42"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="17" char="43"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="20" char="42"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="12" char="43"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="11" char="43"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="11" char="43"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="12" char="43"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="32" char="43"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="8" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="8" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="8" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="3" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="7" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="9" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="8" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="64" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="33" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="60" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="68" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="70" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="72" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="73" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="74" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="75" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="53" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="54" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="86" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="81" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="89" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="90" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="91" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="92" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="8" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="58" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="49" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="7" char="46"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="8" char="43"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="4" char="46"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="5" char="46"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="38" char="46"/>
+    <AElement e1="59" e3="0" id="0" type="4" power="1" name="" e2="39" char="46"/>
+   </matrix>
+  </primaryModel>
+  <ConceptModel>
+   <cs last_link_id="0" last_elem_id="0">
+    <elemets/>
+    <links/>
+   </cs>
+   <spz last_id="1">
+    <elemets>
+     <AElement level="1" id="1" type="0" formalization="0" symbol="99" name="PZ_1" number="1" status="0"/>
+    </elemets>
+    <links/>
+   </spz>
+   <content/>
+  </ConceptModel>
+ </models>
+ <ModuleParams>
+  <Module name="PrimaryModelAuto">
+   <param decStr="z32;z42;z53;z54;z55;z61;z68;z69;z6.10;z6.11;z6.12;"/>
+  </Module>
+ </ModuleParams>
+</project>
